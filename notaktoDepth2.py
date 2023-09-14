@@ -1,5 +1,5 @@
 def print_board(board):
-    return f"{board[0]} | {board[1]} | {board[2]}\n---------\n{board[3]} | {board[4]} | {board[5]}\n---------\n{board[6]} | {board[7]} | {board[8]}\n"
+    return f"{board[0]:^3} | {board[1]:^3} | {board[2]:^3}\n{'-' * 13}\n{board[3]:^3} | {board[4]:^3} | {board[5]:^3}\n{'-' * 13}\n{board[6]:^3} | {board[7]:^3} | {board[8]:^3}\n"
 
 def switch_player(player):
     return 'X' if player == 'O' else 'O'
@@ -40,14 +40,13 @@ def main():
                 board_copy[i] = player
                 evaluation = evaluate_board(board_copy, player)
                 if evaluation == -1:
-                    print(f"Move {i + 1} - {print_board(board_copy)} - Loss (Heuristic)")
+                    print(f"Move {i + 1} -\n{print_board(board_copy)} - Loss (Heuristic)\n")
                 elif evaluation == 0:
-                    print(f"Move {i + 1} - {print_board(board_copy)} - Draw (Heuristic)")
+                    print(f"Move {i + 1} -\n{print_board(board_copy)} - Draw (Heuristic)\n")
                 elif evaluation == 1:
-                    print(f"Move {i + 1} - {print_board(board_copy)} - Win (Terminal State)")
+                    print(f"Move {i + 1} -\n{print_board(board_copy)} - Win (Terminal State)\n")
         
         player = switch_player(player)
 
 if __name__ == "__main__":
     main()
-
