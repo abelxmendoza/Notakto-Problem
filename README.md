@@ -1,7 +1,5 @@
 # Notakto Problem Solver
 
-![Notakto Game](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Notakto.png/220px-Notakto.png)
-
 Welcome to the Notakto Problem Solver repository! This project is designed to solve the "Notakto" game, also known as "To Win the Game," a combinatorial game where two players take turns removing markers from a grid of cells. The goal of the game is to force your opponent to remove the last marker.
 
 ## What is Notakto?
